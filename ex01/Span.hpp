@@ -6,7 +6,7 @@
 /*   By: abait-ta <abait-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 14:47:03 by abait-ta          #+#    #+#             */
-/*   Updated: 2024/01/30 18:27:43 by abait-ta         ###   ########.fr       */
+/*   Updated: 2024/01/31 12:01:31 by abait-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ class NoAvailableSpace: public std::exception
         virtual const char* what() const throw();
 };
 
+class NospanCanbefound : public std::exception
+{
+    public :
+        virtual const char* what() const throw();
+};
+
 class Span
 {
     private :
@@ -40,24 +46,23 @@ class Span
     public :
         Span();
         Span(size_t AssignMax);
+        Span(const Span& Origine);
+        Span& operator=(const Span& Origine);
         void    addNumber(int NumberToAdd);
         void    getClassData() ;
         template <class T>
         void    addNumber(T begin, T end){ 
         if ((long)(_MAXMEMBER - FulledMember) >= labs(end - begin)){
             Holder.insert(Holder.begin()+ FulledMember, begin, end);
-             FulledMember += (end - begin);
+             FulledMember += labs(end - begin);
              Holder.resize(_MAXMEMBER);
         }
          else
             throw NoAvailableSpace();
         };
-        // size_t  shortestSpan();
-        // size_t  longestSpan();
+        size_t  shortestSpan();
+        size_t  longestSpan();
         ~Span();
 };
-
-
-
 
 #endif
