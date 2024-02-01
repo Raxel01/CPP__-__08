@@ -6,21 +6,21 @@
 #    By: abait-ta <abait-ta@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/28 16:45:48 by aechafii          #+#    #+#              #
-#    Updated: 2024/01/30 13:40:08 by abait-ta         ###   ########.fr        #
+#    Updated: 2024/01/31 16:59:01 by abait-ta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Span.cpp
+SRC = main.cpp
 
 CXX = c++
 
-HEADER = Span.hpp
+HEADER = MutantStack.hpp
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-NAME = Spaan
+NAME = Stack
 
 OBJ = ${SRC:.cpp=.o}
 

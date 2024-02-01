@@ -6,7 +6,7 @@
 /*   By: abait-ta <abait-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 13:40:55 by abait-ta          #+#    #+#             */
-/*   Updated: 2024/01/31 12:11:49 by abait-ta         ###   ########.fr       */
+/*   Updated: 2024/01/31 12:16:02 by abait-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,5 @@ int main()
     }catch(std::exception& e){
         std::cout << e.what() << std::endl;
     }
-    
     return (0);
 }

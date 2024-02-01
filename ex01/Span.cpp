@@ -6,7 +6,7 @@
 /*   By: abait-ta <abait-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 14:49:51 by abait-ta          #+#    #+#             */
-/*   Updated: 2024/01/31 12:09:36 by abait-ta         ###   ########.fr       */
+/*   Updated: 2024/01/31 12:16:56 by abait-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,13 @@ Span::Span(const Span& Origine){
 
 /*****COPY ASSIGNMENT OPERATOR*/
 Span& Span::operator=(const Span& Origine){
-    if (this == &Origine){
+    if (this != &Origine){
         this->_MAXMEMBER = Origine._MAXMEMBER;
         this->Holder.clear();
         this->Holder = Origine.Holder;
         this->FulledMember = Origine.FulledMember;
     }
     return (*this);
-
 }
 /******************************/
 
