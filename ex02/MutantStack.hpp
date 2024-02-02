@@ -6,7 +6,7 @@
 /*   By: abait-ta <abait-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 11:47:17 by abait-ta          #+#    #+#             */
-/*   Updated: 2024/02/01 12:01:58 by abait-ta         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:10:16 by abait-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ class MutantStack : public std::stack<T>
     public :
         typedef typename DataType::iterator iterator;
         MutantStack(){};
-        MutantStack(const MutantStack& O){*this=O;};
+        MutantStack(const MutantStack& O){
+            *this = O;
+        };
         MutantStack& operator=(const MutantStack& O){
             static_cast<void>(O);
-            return O;
+            return *this;
         };
         iterator begin(){
             return (this->c.begin());

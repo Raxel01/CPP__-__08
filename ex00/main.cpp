@@ -6,7 +6,7 @@
 /*   By: abait-ta <abait-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/28 17:07:21 by aechafii          #+#    #+#             */
-/*   Updated: 2024/01/30 12:59:38 by abait-ta         ###   ########.fr       */
+/*   Updated: 2024/02/02 11:04:18 by abait-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ const char* NotAvailable::what() const throw()
 {
 	return ("This elem Does Not exist in Contenaire");
 }
+
 class Finder
 {
 	public :
@@ -33,17 +34,14 @@ class Finder
 std::ostream& operator <<(std::ostream& out, const Finder& obj)
 {
 	std::cout << obj.getter() << std::endl;
-	
 	return out;
 }
 
 int main ()
 {
-
 	try{
 		std::vector<int> v;
 		std::vector<Finder>FinderObj;
-		// std::d÷
 		
 		for (int i = 0; i < 5; i++){
 			FinderObj.push_back(Finder(i * 9));
