@@ -1,12 +1,44 @@
 #include <iostream>
 #include <iterator>
 #include <vector>
+#include <deque>
 #include <stack>
+
+                                                //STL : Standard Templates Library
+            // ----------------------------------------------------------------------------
+                    // |                     |                      |               |
+                // Contenaires          ALGORITHMES              iterators        Functor (Fobject);
+                        // |                    |___                |__________________
+        // =================================        |                                 |
+            // |                    |               |-(! && Modifyable)               |
+    // sequenciell                 adaptif          |-Remplacement - Suppression      |----|
+       //|                               //|      //Functions :                            |
+    // |                              |           Sort();                     point to an element of Your Contenaire
+    // vectors                      Stack           Find();                         it's used to may calculate how mush element wakha kaynin Funcrtion Wajdeiin Dejaa
+    // deqeu                        Qeu             
+    // Arrays÷
+    // Lists
 
 int main ()
 {
-    std::vector<int> vectoro;
+    std::vector<int>  vectoro;
+    std::deque<char> dequotor;
+
+    // dequotor.resize(10);
+    dequotor.push_back(122);
+    dequotor.push_back(121);
+    dequotor.push_back(120);
+    dequotor.push_back(119);
+    dequotor.push_back(118);
+    dequotor.push_back(117);
+    dequotor.push_back(116);
+    dequotor.push_back(115);
+    dequotor.push_back(114);
+    dequotor.push_back(113);
+
+
     // vectoro.resize(10);
+
     vectoro.push_back(9);
     vectoro.push_back(90);
     vectoro.push_back(50);
@@ -14,18 +46,38 @@ int main ()
     vectoro.push_back(30);
     vectoro.push_back(20);
     vectoro.push_back(25);
+    vectoro.push_back(15);
+    vectoro.push_back(19);
+    vectoro.push_back(39);
+    vectoro.insert(vectoro.begin(), 9999);
+    // vectoro.emplace_front();
+    // vectoro.pop_back();
+    // vectoro.pop_back();
+    // vectoro.pop_back();
+    // vectoro.pop_back();
+    // vectoro.pop_back();
+
 
 
     std::vector<int>::iterator it = vectoro.begin();
     std::vector<int>::iterator itend = vectoro.end();
-    vectoro.resize(10);
-    while (it != itend)
-    {
-        std::cout << *it << "-"<< std::endl;
+
+    std::deque<char>::iterator itq = dequotor.begin();
+    std::deque<char>::iterator itendq = dequotor.end();
+
+    std::cout << "Vectoro :" << vectoro.front()<< std::endl;
+    std::cout << "dequotor:" << dequotor.front()<< std::endl;
+    while (it != itend){
+        std::cout << (*it) << "-"<< std::endl;
         it++;
     }
-    std::cout << "--CP :" << vectoro.capacity() << std::endl;
-    std::cout << vectoro.size() << std::endl;
+    std::cout << "=====================================" << std::endl;
+       while (itq != itendq){
+        std::cout << (*itq) << "-"<< std::endl;
+        itq++;
+    }
+    // std::cout << "--CP :" << vectoro.capacity() << std::endl;
+    // std::cout << vectoro.size() << std::endl;
     // std::stack<int>vol;
     // vol.push(9);
     // vol.push(8);

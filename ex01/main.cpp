@@ -6,7 +6,7 @@
 /*   By: abait-ta <abait-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 13:40:55 by abait-ta          #+#    #+#             */
-/*   Updated: 2024/01/31 12:16:02 by abait-ta         ###   ########.fr       */
+/*   Updated: 2024/02/01 12:26:13 by abait-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int main()
 {
     try{
             Span OBJ(200); //16
+            // OBJ.longestSpan();
+            // OBJ.shortestSpan();
             // OBJ.addNumber(25);
             // OBJ.addNumber(35);
             // OBJ.addNumber(59);
@@ -44,7 +46,7 @@ int main()
             // OBJ.addNumber(9);
             // OBJ.addNumber(1000);
             // OBJ.addNumber(85);
-            // OBJ.addNumber(0);
+            // OBJ.addNumber(3);
             std::deque<int> deq;
             int lil = -200;
             for (size_t i = 0; i < 200; i++){

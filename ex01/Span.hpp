@@ -6,7 +6,7 @@
 /*   By: abait-ta <abait-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 14:47:03 by abait-ta          #+#    #+#             */
-/*   Updated: 2024/01/31 12:01:31 by abait-ta         ###   ########.fr       */
+/*   Updated: 2024/02/01 12:25:24 by abait-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ class Span
         if ((long)(_MAXMEMBER - FulledMember) >= labs(end - begin)){
             Holder.insert(Holder.begin()+ FulledMember, begin, end);
              FulledMember += labs(end - begin);
-             Holder.resize(_MAXMEMBER);
+             Holder.resize(FulledMember);
         }
          else
             throw NoAvailableSpace();

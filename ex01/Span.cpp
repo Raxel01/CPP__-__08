@@ -6,7 +6,7 @@
 /*   By: abait-ta <abait-ta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 14:49:51 by abait-ta          #+#    #+#             */
-/*   Updated: 2024/01/31 12:16:56 by abait-ta         ###   ########.fr       */
+/*   Updated: 2024/02/01 12:18:10 by abait-ta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void    Span::addNumber(int NumberToAdd){
     if (FulledMember < _MAXMEMBER){
         Holder.insert( Holder.begin() + FulledMember, NumberToAdd);
         FulledMember++;
-        Holder.resize(_MAXMEMBER);
+        Holder.resize(FulledMember);
     }
     else
         throw NoAvailableSpace();
